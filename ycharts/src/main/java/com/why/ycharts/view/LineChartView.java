@@ -36,9 +36,11 @@ public class LineChartView extends ChartView<LineChart>{
 		LineChart lineChart = new LineChart();
 		ArrayList category = new ArrayList();
 		for (int i = 0; i < 6; i++) {
-			category.add("category"+i);
+			category.add(i);
 		}
 		lineChart.getXAxis().setData(category);
+		lineChart.getYAxis().setData(category);
+		lineChart.getBorder().setShow(false);
 		addChart(lineChart);
 	}
 

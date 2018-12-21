@@ -20,10 +20,10 @@ public abstract class Chart<T extends ChartData> implements IChart<T> {
 	ArrayList<T> mData = new ArrayList<>();
 
 	private LineBorder mLineBorder;
-	protected int mWidth;
-	protected int mHeight;
-	protected int mTranslateW;
-	protected int mTranslateH;
+	protected float mWidth;
+	protected float mHeight;
+	protected float mTranslateW;
+	protected float mTranslateH;
 
 	public Chart() {
 		initChart();

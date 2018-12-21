@@ -11,4 +11,6 @@ public interface IBorder {
 	boolean isShow();
 
 	void render(Canvas canvas);
+
+	void setShow(boolean show);
 }

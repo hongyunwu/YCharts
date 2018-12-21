@@ -12,18 +12,18 @@ import com.why.ycharts.contract.IBorder;
  */
 
 public class LineBorder implements IBorder{
-	private int mX;
-	private int mY;
-	private int mWidth;
-	private int mHeight;
+	private float mLeft;
+	private float mTop;
+	private float mRight;
+	private float mBottom;
 	private Paint mBorderPaint;
 	private boolean mShow;
 
-	public LineBorder(int x, int y, int width, int height) {
-		this.mX = x;
-		this.mY = y;
-		this.mWidth = width;
-		this.mHeight = height;
+	public LineBorder(float left, float top, float right, float bottom) {
+		this.mLeft = left;
+		this.mTop = top;
+		this.mRight = right;
+		this.mBottom = bottom;
 		mBorderPaint = new Paint();
 		mBorderPaint.setStyle(Paint.Style.STROKE);
 		setBorderColor(Color.RED);
@@ -42,7 +42,8 @@ public class LineBorder implements IBorder{
 		return mShow;
 	}
 	public void render(Canvas canvas) {
-		canvas.drawRect(mX,mY,mWidth,mHeight,mBorderPaint);
+
+		canvas.drawRect(mLeft,mTop,mRight,mBottom,mBorderPaint);
 	}
 
 	public void setBorderColor(int color) {
@@ -53,10 +54,10 @@ public class LineBorder implements IBorder{
 		return mBorderPaint;
 	}
 
-	public void setBorderRange(int x, int y, int width, int height) {
-		this.mX = x;
-		this.mY = y;
-		this.mWidth = width;
-		this.mHeight = height;
+	public void setBorderRange(float left, float top, float right, float bottom) {
+		this.mLeft = left;
+		this.mTop = top;
+		this.mRight = right;
+		this.mBottom = bottom;
 	}
 }
